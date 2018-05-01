@@ -13,6 +13,10 @@ app.get('/auth/google', function(req, res) {
     res.render('aa-auth-google');
 });
 
+app.get('/auth/google/callback', function(req, res) {
+    res.render('aa-logged');
+});
+
 var server = app.listen(3000, 'localhost', function() {
     var host = server.address().address;
     var port = server.address().port;
